@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de texto</title>
+    <script src="./index.js"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+    </header>
+    <div class="general">
+        <div class="container-encrypt">
+            <div class="text">
+                <h1>Encriptador de texto</h1>
+                <p>Ingresa el texto que desees encriptar o desencriptar</p>
+                <textarea class="text-encrypt" id="text-encrypt" placeholder="Ingrese el texto aquí..."></textarea>
+            </div>
+            <div class="note">
+                <p>Sólo letras minúsculas y sin acentos</p>
+            </div>
+            <div class="buttons">
+                <input type="button" value="Encriptar" class="button-encrypt" onclick="btnEncrypt()">
+                <input type="button" value="Desencriptar" class="button-decrypt" onclick="btnDecrypt()">
+            </div>
+        </div>
+        <div class="container-decrypt">
+            <div class="pantalla1">
+                <div id="text-screen1">
+                    <h2>Ningún mensaje fue encontrado</h2>
+                </div>
+                <div id="result">
+                    <textarea class="text-decrypt" id="message" cols="20" rows="10"></textarea>
+                    <button id="botonCopiar" onclick="copyToClipBoard()">Limpiar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clear">
+        <button id="reload-button" onclick="clearPage()">Recargar</button>
+    </div>
+</body>
+
+</html>
