@@ -7,40 +7,191 @@
     <title>Encriptador de texto</title>
     <script src="./index.js"></script>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="https://kit.fontawesome.com/7e5b2d153f.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
+        <nav class="nav">
+            <!--<div>
+                <img src="./img/zaha.png" alt="logo-zanahoria" class="logo-zanahoria">
+            </div>-->
+            <div>
+                <button class="nav-toggle" aria-label="Abrir menú">
+                    <i class="fas fa-bars"></i> 
+                </button>
+            </div>
+            <div>
+                <ul class="nav-menu"><!--navegul-->
+                    <li class="nav-menu-item"><!--linkmov-->
+                        <a href="Hector17felix.github.io/about-me/" class="nav-link">SOBRE MI</a> <!--link-->
+                    </li>
+                    <li class="nav-menu-item">
+                        <a href="https://github.com/Hector17Felix/Encriptador-Alura" class="nav-link">REPOSITORIO</a>
+                    </li>
+                    <li class="nav-menu-item">
+                        <a class="nav-link "href="mailto:lx16987@innovaccion.mx">
+                            <button class="developer">
+                                <span class="contact">DEVELOPER</span>
+                            </button>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
     </header>
-    <div class="general">
-        <div class="container-encrypt">
-            <div class="text">
-                <h1>Encriptador de texto</h1>
-                <p>Ingresa el texto que desees encriptar o desencriptar</p>
-                <textarea class="text-encrypt" id="text-encrypt" placeholder="Ingrese el texto aquí..."></textarea>
+    <main class="animate__animated animate__fadeIn">
+        <h1 class="animate__animated animate__bounceIn">Encriptador de texto</h1>
+        <div class="general">
+            <div class="container-encrypt">
+                <div class="text">
+                    <h2>Ingresa el texto que desees encriptar o desencriptar</h2>
+                    <textarea
+                        class="text-encrypt"
+                        id="text-encrypt"
+                        placeholder="Solo piensa...">
+                    </textarea>
+                    <div class="note">
+                        <img class="imgInfo" src="./img/informacion.png" alt="info">
+                        <p class="textInfo">Sólo letras minúsculas y sin acentos</p>
+                    </div>
+                    <div class="buttons">
+                        <button id="Show" class="bHover button-encrypt" value="Encriptar" onclick="btnEncrypt()">
+                            <span class="span-mother">
+                                <span>E</span>
+                                <span>N</span>
+                                <span>C</span>
+                                <span>R</span>
+                                <span>I</span>
+                                <span>P</span>
+                                <span>T</span>
+                                <span>A</span>
+                                <span>R</span>
+                            </span>
+                            <span class="span-mother2">
+                                <span>E</span>
+                                <span>N</span>
+                                <span>C</span>
+                                <span>R</span>
+                                <span>I</span>
+                                <span>P</span>
+                                <span>T</span>
+                                <span>A</span>
+                                <span>R</span>
+                            </span>
+                        </button>
+                        <button id="Show" class="bHover button-decrypt" value="Desencriptar" onclick="btnDecrypt()">
+                            <span class="span-mother">
+                                <span>D</span>
+                                <span>E</span>
+                                <span>S</span>
+                                <span>E</span>
+                                <span>N</span>
+                                <span>C</span>
+                                <span>R</span>
+                                <span>I</span>
+                                <span>P</span>
+                                <span>T</span>
+                                <span>A</span>
+                                <span>R</span>
+                            </span>
+                            <span class="span-mother2">
+                                <span>D</span>
+                                <span>E</span>
+                                <span>S</span>
+                                <span>E</span>
+                                <span>N</span>
+                                <span>C</span>
+                                <span>R</span>
+                                <span>I</span>
+                                <span>P</span>
+                                <span>T</span>
+                                <span>A</span>
+                                <span>R</span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <button class="clearButton" value="Desencriptar" id="reload-button" onclick="clearPage()">
+                    LIMPIAR
+                </button>
             </div>
-            <div class="note">
-                <p>Sólo letras minúsculas y sin acentos</p>
-            </div>
-            <div class="buttons">
-                <input type="button" value="Encriptar" class="button-encrypt" onclick="btnEncrypt()">
-                <input type="button" value="Desencriptar" class="button-decrypt" onclick="btnDecrypt()">
+            <div class="container-decrypt">
+                <div class="text">
+                    <div id="text-screen1">
+                        <h2 class="noneMess">¡Ningún mensaje fue encontrado!</h2>
+                        <img src="./munieco.svg" alt="muñeco con lupa">
+                    </div>
+                    <div id="result">
+                        <h2 id="decryptShower">!Mensaje desencriptado¡</h2>
+                        <h2 id="encryptShower">¡Mensaje encriptado!</h2>
+                        <div class="text">
+                            <textarea class="text-decrypt" id="message" placeholder="No hay ningun mensaje para encriptar o desencriptar"></textarea>
+                            <button class="bHover" id="botonCopiar" onclick="copyToClipBoard()">
+                                <span class="span-mother">
+                                    <span>C</span>
+                                    <span>O</span>
+                                    <span>P</span>
+                                    <span>I</span>
+                                    <span>A</span>
+                                    <span>R</span>
+                                </span>
+                                <span class="span-mother2">
+                                    <span>C</span>
+                                    <span>O</span>
+                                    <span>P</span>
+                                    <span>I</span>
+                                    <span>A</span>
+                                    <span>R</span>
+                                </span>
+                            </button>
+                        </div>
+                    </div>
             </div>
         </div>
-        <div class="container-decrypt">
-            <div class="pantalla1">
-                <div id="text-screen1">
-                    <h2>Ningún mensaje fue encontrado</h2>
-                </div>
-                <div id="result">
-                    <textarea class="text-decrypt" id="message" cols="20" rows="10"></textarea>
-                    <button id="botonCopiar" onclick="copyToClipBoard()">Limpiar</button>
-                </div>
-            </div>
+    </main>
+    <footer>
+        <div>
+            © Copyright felix_999x - 2023
         </div>
-    </div>
-    <div class="clear">
-        <button id="reload-button" onclick="clearPage()">Recargar</button>
-    </div>
+        <div class="linkmov padd">
+            <a href="mailto:lx16987@innovaccion.mx">
+            <svg xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-mail"
+                width="20" height="20" viewBox="0 0 24 24"
+                stroke-width="2" stroke="#fff"fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <rect x="3" y="5" width="18" height="14" rx="2" />
+                <polyline points="3 7 12 13 21 7" />
+            </svg>
+        </a>
+        <a href="https://www.linkedin.com/in/felix999x">
+            <svg xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-brand-linkedin"
+            width="20" height="20" viewBox="0 0 24 24"
+            stroke-width="2" stroke="#fff"
+            fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <rect x="4" y="4" width="16" height="16" rx="2" />
+            <line x1="8" y1="11" x2="8" y2="16" />
+            <line x1="8" y1="8" x2="8" y2="8.01" />
+            <line x1="12" y1="16" x2="12" y2="11" />
+            <path d="M16 16v-3a2 2 0 0 0 -4 0" />
+            </svg>
+        </a>
+        <a href="https://github.com/Hector17Felix">
+            <svg xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-brand-github"
+            width="20" height="20" viewBox="0 0 24 24"
+            stroke-width="2" stroke="#fff"
+            fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+            </svg>
+        </a>
+        </div>
+    </footer>
+    <script src="./header.js"></script>
 </body>
-
 </html>
