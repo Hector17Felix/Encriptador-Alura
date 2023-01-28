@@ -10,3 +10,13 @@ if (navMenu.classList.contains("nav-menu_visible")) {
     navToggle.setAttribute("aria-label", "Abrir menú");
 }
 });
+//Revober clases 
+setTimeout(function(){
+    document.querySelector("h1").classList.remove("animate__animated", "animate__bounceIn");
+}, 1000);
+setTimeout(function(){
+    document.querySelector("main").classList.remove("animate__animated", "animate__fadeIn");
+}, 1000);
+setTimeout(function(){
+    document.getElementById("text-screen1").classList.remove("animate__animated", "animate__bounceOut")
+}, 1000);

@@ -69,13 +69,3 @@ copyToClipBoard = () => {
     document.execCommand('copy');
     alert("¡Copiado!");
 }
-//Revober clases 
-setTimeout(function(){
-    document.querySelector("h1").classList.remove("animate__animated", "animate__bounceIn");
-}, 2000);
-setTimeout(function(){
-    document.querySelector("main").classList.remove("animate__animated", "animate__fadeIn");
-}, 2000);
-setTimeout(function(){
-    document.getElementById("text-screen1").classList.remove("animate__animated", "animate__bounceOut")
-}, 2000);

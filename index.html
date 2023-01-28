@@ -23,20 +23,39 @@
                 </button>
             </div>
             <div>
-                <ul class="nav-menu"><!--navegul-->
-                    <li class="nav-menu-item"><!--linkmov-->
-                        <a href="Hector17felix.github.io/about-me/" class="nav-link">SOBRE MI</a> <!--link-->
+                <ul class="nav-menu">
+                    <li class="nav-menu-item">
+                        <a href="https://hector17felix.github.io/about-me/" class="nav-link">Sobre mí</a>
                     </li>
                     <li class="nav-menu-item">
-                        <a href="https://github.com/Hector17Felix/Encriptador-Alura" class="nav-link">REPOSITORIO</a>
+                        <a href="https://github.com/Hector17Felix/Encriptador-Alura" class="nav-link">Repositorio</a>
                     </li>
                     <li class="nav-menu-item">
                         <a class="nav-link "href="mailto:lx16987@innovaccion.mx">
                             <button class="developer">
-                                <span class="contact">DEVELOPER</span>
+                                <span class="contact">Desarrollador</span>
                             </button>
                         </a>
                     </li>
+                    <li>
+                        <div class="followMovil">
+                            <a href="https://www.facebook.com/felix.999x/"  margin="9px">
+                                <img src="./img/icons8-facebook-50.png" class="sizeimg"/>
+                            </a>
+                            <a href="https://www.instagram.com/felix_999x/">
+                                <img src="./img/icons8-instagram-50.png" class="sizeimg">
+                            </a>
+                            <a href="https://twitter.com/felix_999x">
+                                <img src="./img/icons8-twitter-50.png" class="sizeimg">
+                            </a>
+                            <a href="https://github.com/Hector17Felix">
+                                <img src="./img/icons8-github-48.png" class="sizeimg">
+                            </a>
+                            <a href="https://www.linkedin.com/in/felix999x">
+                                <img src="./img/icons8-linkedin-rodeado-de-círculo-50.png" class="sizeimg">
+                            </a>
+                        </div>
+                    <li>
                 </ul>
             </div>
         </nav>
@@ -46,18 +65,14 @@
         <div class="general">
             <div class="container-encrypt">
                 <div class="text">
-                    <h2>Ingresa el texto que desees encriptar o desencriptar</h2>
-                    <textarea
-                        class="text-encrypt"
-                        id="text-encrypt"
-                        placeholder="Solo piensa...">
-                    </textarea>
+                    <h2>Ingresa el texto que desees encriptar</h2>
+                    <textarea class="text-encrypt" id="text-encrypt" placeholder="Sólo piensa..."></textarea>
                     <div class="note">
                         <img class="imgInfo" src="./img/informacion.png" alt="info">
                         <p class="textInfo">Sólo letras minúsculas y sin acentos</p>
                     </div>
                     <div class="buttons">
-                        <button id="Show" class="bHover button-encrypt" value="Encriptar" onclick="btnEncrypt()">
+                        <button class="bHover button-encrypt" value="Encriptar" onclick="btnEncrypt()">
                             <span class="span-mother">
                                 <span>E</span>
                                 <span>N</span>
@@ -81,7 +96,7 @@
                                 <span>R</span>
                             </span>
                         </button>
-                        <button id="Show" class="bHover button-decrypt" value="Desencriptar" onclick="btnDecrypt()">
+                        <button class="bHover button-decrypt" value="Desencriptar" onclick="btnDecrypt()">
                             <span class="span-mother">
                                 <span>D</span>
                                 <span>E</span>
@@ -112,22 +127,22 @@
                             </span>
                         </button>
                     </div>
+                    <button class="clearButton" value="Desencriptar" id="reload-button" onclick="clearPage()">
+                        LIMPIAR
+                    </button>
                 </div>
-                <button class="clearButton" value="Desencriptar" id="reload-button" onclick="clearPage()">
-                    LIMPIAR
-                </button>
-            </div>
+                    </div>
             <div class="container-decrypt">
                 <div class="text">
                     <div id="text-screen1">
                         <h2 class="noneMess">¡Ningún mensaje fue encontrado!</h2>
-                        <img src="./munieco.svg" alt="muñeco con lupa">
+                        <img class="imgSize" src="./munieco.svg" alt="muñeco con lupa">
                     </div>
                     <div id="result">
                         <h2 id="decryptShower">!Mensaje desencriptado¡</h2>
                         <h2 id="encryptShower">¡Mensaje encriptado!</h2>
                         <div class="text">
-                            <textarea class="text-decrypt" id="message" placeholder="No hay ningun mensaje para encriptar o desencriptar"></textarea>
+                            <textarea class="text-decrypt" id="message" placeholder="No hay ningún mensaje para encriptar o desencriptar"></textarea>
                             <button class="bHover" id="botonCopiar" onclick="copyToClipBoard()">
                                 <span class="span-mother">
                                     <span>C</span>

@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Signika:wght@500&display=swap');/*Para titulo h1*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 body{
-    background-color: #e1e1e1;
+    background-color: #cfcfcf;
     font-family: 'Roboto', sans-serif;
     height: 100vh;
     margin: 0px;
@@ -19,14 +19,11 @@ a:visited{
 	text-decoration: none;
 }
 header {
-    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 50px;
     width: 100%;
-}
-.logo-zanahoria{
-    width: 27px;
-    filter: drop-shadow( 1px 1px 5px #c3c3c3);
-    margin-left: 35px;
-    margin-top: 3px;
 }
 h1{
     font-family: 'Signika', sans-serif;
@@ -39,7 +36,7 @@ h2{
     font-family: 'Signika', sans-serif;
     text-align: center;
     font-size: 25px;
-    color: #0a3871;/*7a7a7a*/
+    color: #7a7a7a;
     margin: 20px 0px 20px 0px;
 }
 .general{
@@ -80,35 +77,27 @@ h2{
 }
 .text-encrypt{
     font-family: 'Roboto', sans-serif;
+    color: #2343fa;
     font-size: 1rem;
-    color: #0a3871;
     display: flex;
     align-items: center;
-    width: 100%;
-    height: 150px;
+    width: 450px;
+    height: 300px;
 }
 .text-decrypt{
     font-family: 'Roboto', sans-serif;
+    color: #2343fa;
     font-size: 1rem;
-    color: #0a3871;
     display: flex;
     align-items: center;
-    width: 100%;
-    height: 100px;
+    width: 450px;
+    height: 300px;
 }
 .text{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
-.text-encrypt{
-    width: 450px;
-    height: 300px;
-}
-.text-decrypt{
-    width: 450px;
-    height: 300px;
 }
 #result{
     display: none;
@@ -120,11 +109,13 @@ h2{
 /*Botones*/
 .buttons{
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.bHover {
+.bHover{
     margin: 10px;
     font-weight: bold;
-    color: white;
+    color: #ffffff;
     border-radius: 2rem;
     width: 120px;
     height: 40px;
@@ -256,13 +247,13 @@ h2{
 /*boton lIMPIAR*/
 .clearButton {
     display: none;
-    width: 100%;
+    width: 50%;
     border: none;
     font-family: sans-serif;
     font-size: 17px;
     background: transparent;
     color: #006bb3;
-    border: solid 1px #006bb333;
+    border: solid 1px rgba(0, 107, 179, 0.2);
     padding: 10px;
     border-radius: 4px;
     transition-duration: 0.2s;
@@ -282,7 +273,7 @@ h2{
     background: #00000005;
     border: solid 1px gainsboro;
 }
-@media (max-width:480px) and (min-width: 0px){
+@media (max-width:563px) and (min-width: 0px){
     .general{
         display: flex;
         align-items: center;
@@ -309,7 +300,6 @@ h2{
     .textInfo{
         margin: 0px;
         font-size: 0.7rem;
-        color: #219ebc;
     }
     .container-encrypt{
         display: flex;
@@ -331,6 +321,61 @@ h2{
         width: 80%;
         height: 200px;
     }
+}
+@media (max-width: 860px) and (min-width: 563px){
+    h2{
+        font-size: 20px;
+    }
+    .general{
+        display: flex;
+        align-items: baseline;
+        justify-content: center;
+        padding: 0px;
+        margin-top: 0px;
+    }
+    .note{
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        align-items: baseline;
+        padding: 10px 0px 10px 0px;
+        margin: 0px;
+    }
+    .imgInfo{
+        text-align: center;
+        padding: 0px 10px 0px 4px;
+        margin: 0px;
+        width: 0.7rem;
+        height: 0.7rem;
+    }
+    .textInfo{
+        margin: 0px;
+        font-size: 0.7rem;
+    }
+    .imgSize{
+        width: 90%;
+    }
+    .container-encrypt{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 80%;
+    }
+    .container-decrypt{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 80%;
+    }
+    .text-encrypt{
+        width: 50%;
+        height: 200px;
+    }
+    .text-decrypt{
+        width: 50%;
+        height: 200px;
+    }
+
 }
 footer{
     display: flex;
@@ -374,8 +419,7 @@ footer{
 .nav-menu {
     list-style: none;
     display: flex;
-    font-weight: 400;
-    gap: 15px;
+    gap: 20px;
     margin-top: 0px;
     margin-bottom: 4px;
     align-items: center;
@@ -384,7 +428,6 @@ footer{
     font-family: 'Poppins', sans-serif;
     font-size: 15px;
     margin: 0 10px;
-    text-transform: uppercase;
 }
 .developer{
     align-items: center;
@@ -405,7 +448,7 @@ span.contact {
 .developer::before,
 .developer::after {
     content: "";
-    width: 0;
+    width: 0px;
     height: 2px;
     position: absolute;
     transition: all 0.2s linear;
@@ -415,7 +458,7 @@ span::before,
 span::after {
     content: "";
     width: 2px;
-    height: 0;
+    height: 0px;
     position: absolute;
     transition: all 0.2s linear;
     background: #3653f8;
@@ -457,6 +500,12 @@ span::after {
     cursor: pointer;
     display: none;
 }
+.followMovil{
+    display: none;
+}
+.hidden{
+    display: none;
+}
 /* MOBILE */
 @media (max-width: 768px) and (min-width: 0px){
     header {
@@ -479,8 +528,9 @@ span::after {
         flex-direction: column;
         align-items: center;
         margin: 0px;
-        padding: 0px;
-        background-color: #327fb3;
+        padding: 10px 0px 0px 0px;
+        background-color: #023847;
+        color: #ffffff;
         position: fixed;
         top: 50px;
         width: 100%;
@@ -490,7 +540,8 @@ span::after {
         transition: left 0.3s;
     }
     .nav-menu-item {
-        line-height: 70px;
+        line-height: 50px;
+        font-size: 20px;
     }
     .nav-menu-link:hover,
     .nav-menu-link_active {
@@ -506,7 +557,31 @@ span::after {
     .nav-toggle:focus:not(:focus-visible) {
         outline: none;
     }
-}
-.hidden {
-    display: none;
+    .developer{
+        color: #ffffff;
+        font-size: 20px;
+    }
+    span.contact {
+        display: block;
+        padding: 5px 14px;
+    }
+    .developer:hover::before,
+    .developer:hover::after {
+        width: 0%;
+    }      
+    .developer:hover span::before,
+    .developer:hover span::after {
+        height: 0%;
+    
+    }
+    .followMovil{
+        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .sizeimg{
+        width: 30px;
+        padding: 9px;
+    }
 }
